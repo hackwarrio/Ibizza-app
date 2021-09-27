@@ -27,6 +27,17 @@
                 </div>
 
                 <div class="mb-3">
+                    <label for="role" class="form-label">Tipo de Usuario</label>
+                    <input class="form-control" list="opciones_usuario" id="role" name="role" placeholder="Escribe el tipo de usuario...">
+                    <datalist id="opciones_usuario">
+                    <option value="Administrador">
+                    <option value="Vendedor">
+                    <option value="Supervisor">
+                    <option value="Empresaria">
+                    </datalist>
+                </div>
+
+                <div class="mb-3">
                     <x-jet-label value="{{ __('Password') }}" />
 
                     <x-jet-input class="{{ $errors->has('password') ? 'is-invalid' : '' }}" type="password"
@@ -56,12 +67,12 @@
 
                 <div class="mb-0">
                     <div class="d-flex justify-content-end align-items-baseline">
-                        <a class="text-muted mr-3 text-decoration-none" href="{{ route('login') }}">
-                            {{ __('Already registered?') }}
+                        <a class="text-muted me-3 text-decoration-none" href="{{ route('login') }}">
+                            {{ __('Ya estas registrado?') }}
                         </a>
 
                         <x-jet-button>
-                            {{ __('Register') }}
+                            {{ __('Registrar') }}
                         </x-jet-button>
                     </div>
                 </div>
